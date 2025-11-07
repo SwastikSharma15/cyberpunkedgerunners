@@ -16,7 +16,7 @@ import './features/story/styles/story.css'
 import './features/footer/styles/footer.css'
 
 // Import animation styles
-import './shared/styles/animations.css'
+import './features/animations.css'
 
 export const App: React.FC = () => {
   useEffect(() => {
