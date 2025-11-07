@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { useScrollVisibility } from '../../shared/hooks/useScrollEffects'
-import { useSmoothScroll } from '../../shared/hooks/useScrollEffects'
-import { CONTENT } from '../../shared/utils/constants'
+import { useScrollVisibility, useSmoothScroll } from '../../useScrollEffects'
+import { CONTENT } from '../../constants'
 import { GlowingLink, SocialLink } from './GlowingLink'
 
 export const Footer: React.FC = () => {

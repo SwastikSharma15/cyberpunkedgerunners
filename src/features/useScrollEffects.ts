@@ -79,7 +79,7 @@ export const useScrollVisibility = (
   rootMargin: string = '0px'
 ) => {
   const [isVisible, setIsVisible] = useState(false)
-  const elementRef = useRef<HTMLElement | null>(null)
+  const elementRef = useRef<any>(null)
 
   useEffect(() => {
     const element = elementRef.current
@@ -110,7 +110,7 @@ export const useScrollParallax = (
   speed: number = 0.5,
   direction: 'y' | 'x' = 'y'
 ) => {
-  const elementRef = useRef<HTMLElement | null>(null)
+  const elementRef = useRef<any>(null)
   const [transform, setTransform] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
@@ -168,7 +168,7 @@ export const useScrollTrigger = (
     triggerOnce?: boolean
   }
 ) => {
-  const elementRef = useRef<HTMLElement | null>(null)
+  const elementRef = useRef<any>(null)
   const [hasTriggered, setHasTriggered] = useState(false)
 
   const threshold = options?.threshold ?? 0.1
