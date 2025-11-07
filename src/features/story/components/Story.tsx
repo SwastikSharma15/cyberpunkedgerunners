@@ -17,7 +17,7 @@ export const Story: React.FC = () => {
   }, [progress])
 
   // Use scroll timeline for panel transitions
-  const panelSelectors = CONTENT.STORY.PANELS.map((_, index) => `#story-panel-${index}`)
+  const panelSelectors = CONTENT.STORY.PANELS.map((_: typeof CONTENT.STORY.PANELS[0], index: number) => `#story-panel-${index}`)
   useScrollTimeline('#story', panelSelectors, {
     scrub: true,
     pin: true,
