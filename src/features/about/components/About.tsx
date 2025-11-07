@@ -1,6 +1,6 @@
 import React from 'react'
-import { useRevealAnimation } from '../../shared/hooks/useGSAPAnimations'
-import { CONTENT } from '../../shared/utils/constants'
+import { useRevealAnimation } from '../../../shared/hooks/useGSAPAnimations'
+import { CONTENT } from '../../../shared/utils/constants'
 import { RevealCard } from './RevealCard'
 
 export const About: React.FC = () => {
