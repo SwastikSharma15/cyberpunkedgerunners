@@ -1,0 +1,303 @@
+/* Story section specific styles */
+
+/* Story panels container */
+.story-container {
+  position: relative;
+  min-height: 400vh; /* 4 panels at 100vh each */
+}
+
+.story-panel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  transition: all 1s ease-in-out;
+}
+
+.story-panel.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Progress indicator animations */
+.progress-dot {
+  position: relative;
+  overflow: hidden;
+}
+
+.progress-dot::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: currentColor;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active::before {
+  width: 100%;
+  height: 100%;
+}
+
+.progress-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  opacity: 0;
+  transform: scale(0);
+  transition: all 0.3s ease;
+}
+
+.progress-dot.active::after {
+  opacity: 1;
+  transform: scale(2);
+  animation: pulse-ring 2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(3);
+    opacity: 0;
+  }
+}
+
+/* Data flow animation */
+@keyframes data-flow {
+  0% {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+}
+
+/* Orb rotation animations */
+.orb-ring {
+  position: absolute;
+  border-radius: 50%;
+  border: inherit;
+  animation: orb-rotate 10s linear infinite;
+}
+
+.orb-ring:nth-child(2) {
+  animation-direction: reverse;
+  animation-duration: 7s;
+}
+
+.orb-ring:nth-child(3) {
+  animation-direction: reverse;
+  animation-duration: 5s;
+}
+
+@keyframes orb-rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Panel transition effects */
+.panel-transition-enter {
+  animation: panel-enter 1s ease-out forwards;
+}
+
+.panel-transition-exit {
+  animation: panel-exit 1s ease-out forwards;
+}
+
+@keyframes panel-enter {
+  from {
+    opacity: 0;
+    transform: translateX(100%) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+}
+
+@keyframes panel-exit {
+  from {
+    opacity: 1;
+    transform: translateX(0) scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-100%) scale(0.9);
+  }
+}
+
+/* Glitch effect for story elements */
+.story-glitch {
+  position: relative;
+  animation: story-glitch-main 4s infinite;
+}
+
+.story-glitch::before,
+.story-glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.story-glitch::before {
+  color: #ff006e;
+  z-index: -1;
+  animation: story-glitch-red 2s infinite;
+  clip-path: polygon(0 0, 100% 0, 100% 25%, 0 25%);
+}
+
+.story-glitch::after {
+  color: #00ffff;
+  z-index: -2;
+  animation: story-glitch-cyan 1.5s infinite;
+  clip-path: polygon(0 75%, 100% 75%, 100% 100%, 0 100%);
+}
+
+@keyframes story-glitch-main {
+  0%, 100% { transform: translate(0); }
+  2% { transform: translate(-1px, 1px); }
+  4% { transform: translate(1px, -1px); }
+  6% { transform: translate(0); }
+}
+
+@keyframes story-glitch-red {
+  0%, 100% { transform: translate(0); }
+  25% { transform: translate(1px, -0.5px); }
+  50% { transform: translate(-1px, 0.5px); }
+  75% { transform: translate(1px, -0.5px); }
+}
+
+@keyframes story-glitch-cyan {
+  0%, 100% { transform: translate(0); }
+  33% { transform: translate(-0.5px, 1px); }
+  66% { transform: translate(0.5px, -1px); }
+}
+
+/* Visual element specific styles */
+.visual-cityscape {
+  position: relative;
+  overflow: hidden;
+}
+
+.city-building {
+  position: absolute;
+  bottom: 0;
+  background: #0a0a0a;
+  border-radius: 4px 4px 0 0;
+  animation: building-flicker 5s ease-in-out infinite;
+}
+
+.city-building:nth-child(even) {
+  animation-delay: 1s;
+}
+
+.city-building:nth-child(3n) {
+  animation-delay: 2s;
+}
+
+@keyframes building-flicker {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.8; }
+}
+
+/* Circuit board animations */
+.circuit-path {
+  stroke-dasharray: 100;
+  stroke-dashoffset: 100;
+  animation: circuit-draw 3s ease-in-out infinite;
+}
+
+.circuit-path:nth-child(2) {
+  animation-delay: 1s;
+}
+
+@keyframes circuit-draw {
+  0% { stroke-dashoffset: 100; }
+  50% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -100; }
+}
+
+/* Horizon star animations */
+.horizon-star {
+  animation: star-twinkle 3s ease-in-out infinite;
+}
+
+.horizon-star:nth-child(even) {
+  animation-delay: 1s;
+}
+
+.horizon-star:nth-child(3n) {
+  animation-delay: 2s;
+}
+
+@keyframes star-twinkle {
+  0%, 100% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* Parallax layering */
+.parallax-layer {
+  position: absolute;
+  inset: 0;
+}
+
+.parallax-layer-bg {
+  z-index: 1;
+}
+
+.parallax-layer-mid {
+  z-index: 2;
+}
+
+.parallax-layer-fg {
+  z-index: 3;
+}
+
+/* Enhanced scroll performance */
+.gpu-accelerated-element {
+  transform: translateZ(0);
+  will-change: transform;
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+/* Story section specific backgrounds */
+.story-bg-gradient {
+  background: linear-gradient(
+    135deg,
+    rgba(10, 10, 10, 0.9) 0%,
+    rgba(36, 0, 70, 0.8) 25%,
+    rgba(58, 12, 163, 0.8) 50%,
+    rgba(114, 9, 183, 0.8) 75%,
+    rgba(10, 10, 10, 0.9) 100%
+  );
+  background-size: 400% 400%;
+  animation: story-bg-shift 20s ease infinite;
+}
+
+@keyframes story-bg-shift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}

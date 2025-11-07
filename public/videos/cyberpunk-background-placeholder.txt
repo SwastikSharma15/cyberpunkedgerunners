@@ -1,0 +1,8 @@
+This is a placeholder file for the cyberpunk background video.
+In a production environment, this would be a video file (MP4 format) showing:
+- Cyberpunk cityscapes with neon lights
+- Flying vehicles and futuristic architecture
+- Rain-slicked streets reflecting neon signs
+- Panoramic views of a dystopian metropolis
+
+The video should be optimized for web use and have appropriate compression.
