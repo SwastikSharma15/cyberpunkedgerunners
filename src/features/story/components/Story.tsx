@@ -92,7 +92,7 @@ export const Story: React.FC = () => {
       {/* Progress indicator */}
       <div className="fixed top-1/2 right-8 z-30 hidden lg:block">
         <div className="flex flex-col space-y-3">
-          {CONTENT.STORY.PANELS.map((_, index) => (
+          {CONTENT.STORY.PANELS.map((_: typeof CONTENT.STORY.PANELS[0], index: number) => (
             <button
               key={index}
               onClick={() => {
