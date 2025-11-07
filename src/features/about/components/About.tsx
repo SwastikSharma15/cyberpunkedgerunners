@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRevealAnimation } from '../../../shared/hooks/useGSAPAnimations'
+import { useRevealAnimation } from '../useGSAPAnimations'
 import { CONTENT } from '../../../shared/utils/constants'
 import { RevealCard } from './RevealCard'
 
