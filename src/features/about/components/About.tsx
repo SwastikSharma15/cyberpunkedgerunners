@@ -43,7 +43,7 @@ export const About: React.FC = () => {
 
         {/* Cards grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {CONTENT.ABOUT.CARDS.map((card, index) => (
+          {CONTENT.ABOUT.CARDS.map((card: typeof CONTENT.ABOUT.CARDS[0], index: number) => (
             <RevealCard
               key={card.title}
               title={card.title}
