@@ -94,6 +94,27 @@ export const CONTENT = {
     STORY: 'Story',
     CONTACT: 'Contact'
   },
+  ABOUT: {
+    HEADLINE: 'DISCOVER THE EDGE',
+    SUBTITLE: 'An immersive journey into the cyberpunk universe where every pixel tells a story',
+    CARDS: [
+      {
+        title: 'THE VISION',
+        description: 'A groundbreaking fusion of anime aesthetics and interactive web technology, creating an experience that blurs the line between art and functionality.',
+        icon: 'vision'
+      },
+      {
+        title: 'THE AESTHETIC',
+        description: 'Drawing inspiration from Cyberpunk: Edgerunners, we combine neon-soaked visuals with smooth animations to create a truly immersive digital experience.',
+        icon: 'aesthetic'
+      },
+      {
+        title: 'THE EXPERIENCE',
+        description: 'Built with cutting-edge web technologies, every interaction is crafted to deliver performance and visual impact in perfect harmony.',
+        icon: 'experience'
+      }
+    ]
+  },
   FOOTER: {
     COPYRIGHT: `© ${new Date().getFullYear()} Cyberpunk Edgerunners. All rights reserved.`,
     BACK_TO_TOP: 'Back to Top'
