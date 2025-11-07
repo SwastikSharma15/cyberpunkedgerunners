@@ -3,13 +3,12 @@ import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import {
   revealAnimations,
-  scrollAnimations,
   createHeroTimeline,
   respectsReducedMotion,
   optimizeAnimation,
   cleanupAnimations
 } from '../utils/animationConfig'
-import { DURATIONS, MEDIA_QUERIES } from '../utils/constants'
+import { DURATIONS } from '../utils/constants'
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
