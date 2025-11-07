@@ -1,0 +1,74 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap');
+
+/* Global Styles */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(10, 10, 10, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff006e, #00ffff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #c77dff, #4361ee);
+}
+
+/* Selection styles */
+::selection {
+  background-color: rgba(255, 0, 110, 0.3);
+  color: #ffffff;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 0, 110, 0.3);
+  color: #ffffff;
+}
+
+/* Focus styles for accessibility */
+:focus-visible {
+  outline: 2px solid #00ffff;
+  outline-offset: 2px;
+}
+
+/* Base styles for content */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', monospace;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+/* Image and video optimization */
+img, video {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
