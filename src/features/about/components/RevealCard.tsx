@@ -1,6 +1,5 @@
 import React from 'react'
 import { useRevealAnimation } from '../../shared/hooks/useGSAPAnimations'
-import { ICONS } from '../../shared/utils/constants'
 
 interface RevealCardProps {
   title: string
