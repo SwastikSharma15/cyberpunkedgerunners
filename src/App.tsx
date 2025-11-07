@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { Layout } from './shared/components/Layout'
 import { BackgroundEffects } from './shared/components/BackgroundEffects'
+import { CustomCursor } from './shared/components/CustomCursor'
 import { Navbar } from './features/navbar'
 import { Hero } from './features/hero'
 import { About } from './features/about'
