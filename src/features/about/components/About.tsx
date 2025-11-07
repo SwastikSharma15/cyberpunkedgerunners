@@ -1,6 +1,6 @@
 import React from 'react'
 import { useRevealAnimation } from '../useGSAPAnimations'
-import { CONTENT } from '../../../shared/utils/constants'
+import { CONTENT } from '../constants'
 import { RevealCard } from './RevealCard'
 
 export const About: React.FC = () => {
