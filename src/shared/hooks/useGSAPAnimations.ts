@@ -82,7 +82,7 @@ export const useRevealAnimation = (
 
 // Hook for parallax effects
 export const useParallax = (
-  selector: string,
+  _selector: string,
   speed: number = 0.5
 ) => {
   const elementRef = useRef<HTMLElement | null>(null)
