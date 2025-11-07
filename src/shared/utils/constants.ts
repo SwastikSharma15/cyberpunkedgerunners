@@ -115,6 +115,40 @@ export const CONTENT = {
       }
     ]
   },
+  STORY: {
+    HEADLINE: 'THE CHRONICLES',
+    SUBTITLE: 'Navigate through a narrative shaped by technology, rebellion, and the human spirit',
+    PANELS: [
+      {
+        title: 'ORIGINS',
+        subtitle: 'The Beginning of the Edge',
+        content: 'In the neon-drenched streets of Night City, where technology and humanity collide, a new form of digital storytelling emerges. This is where the journey begins.',
+        type: 'intro',
+        visual: 'cityscape'
+      },
+      {
+        title: 'TECHNOLOGY',
+        subtitle: 'Code Meets Consciousness',
+        content: 'Advanced algorithms and creative vision merge to create experiences that transcend traditional web design. Every line of code tells a story.',
+        type: 'showcase',
+        visual: 'circuit'
+      },
+      {
+        title: 'REBELLION',
+        subtitle: 'Breaking Digital Boundaries',
+        content: 'We challenge conventions and push the limits of what\'s possible on the web. Innovation happens when we dare to be different.',
+        type: 'technical',
+        visual: 'glitch'
+      },
+      {
+        title: 'EVOLUTION',
+        subtitle: 'The Next Frontier',
+        content: 'The journey continues as we explore new horizons in digital experiences. Join us as we shape the future of web interaction.',
+        type: 'conclusion',
+        visual: 'horizon'
+      }
+    ]
+  },
   FOOTER: {
     COPYRIGHT: `© ${new Date().getFullYear()} Cyberpunk Edgerunners. All rights reserved.`,
     BACK_TO_TOP: 'Back to Top'
