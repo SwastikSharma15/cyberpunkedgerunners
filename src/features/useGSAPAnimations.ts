@@ -7,8 +7,8 @@ import {
   respectsReducedMotion,
   optimizeAnimation,
   cleanupAnimations
-} from '../utils/animationConfig'
-import { DURATIONS } from '../utils/constants'
+} from './animationConfig'
+import { DURATIONS } from './constants'
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger)
