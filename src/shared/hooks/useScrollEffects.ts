@@ -1,5 +1,5 @@
 import { useEffect, useState, useCallback, useRef } from 'react'
-import { SCROLL, PERFORMANCE } from '../utils/constants'
+import { SCROLL } from '../utils/constants'
 
 // Hook for detecting scroll direction
 export const useScrollDirection = () => {
