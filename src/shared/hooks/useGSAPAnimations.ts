@@ -254,7 +254,7 @@ export const useResponsiveAnimation = (
     }
 
     // Throttle resize events
-    let resizeTimer: NodeJS.Timeout
+    let resizeTimer: number
     const throttledResize = () => {
       clearTimeout(resizeTimer)
       resizeTimer = setTimeout(handleResize, 150)
