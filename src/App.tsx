@@ -71,11 +71,8 @@ export const App: React.FC = () => {
         <Footer />
       </main>
 
-      {/* Custom Cursor (optional - for desktop) */}
-      <div className="custom-cursor hidden lg:block">
-        <div className="cursor-dot" />
-        <div className="cursor-ring" />
-      </div>
+      {/* Custom Cursor (for desktop) */}
+      <CustomCursor />
     </Layout>
   )
 }
