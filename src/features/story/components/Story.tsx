@@ -117,7 +117,7 @@ export const Story: React.FC = () => {
       {/* Story panels */}
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="story-container">
-          {CONTENT.STORY.PANELS.map((panel, index) => (
+          {CONTENT.STORY.PANELS.map((panel: typeof CONTENT.STORY.PANELS[0], index: number) => (
             <div
               key={index}
               id={`story-panel-${index}`}
