@@ -39,8 +39,6 @@ export const Footer: React.FC = () => {
     }
   ]
 
-  const currentYear = new Date().getFullYear()
-
   return (
     <footer id="footer" className="relative py-16 overflow-hidden">
       {/* Background effects */}
