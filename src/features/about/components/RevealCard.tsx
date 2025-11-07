@@ -1,5 +1,5 @@
 import React from 'react'
-import { useRevealAnimation } from '../useGSAPAnimations'
+import { useRevealAnimation } from '../hooks/useGSAPAnimations'
 
 interface RevealCardProps {
   title: string
