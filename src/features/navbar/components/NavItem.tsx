@@ -40,6 +40,7 @@ export const NavItem: React.FC<NavItemProps> = ({
       onClick={onClick}
       className={classes}
       role="menuitem"
+      aria-label={`Navigate to ${href}`}
     >
       {name}
     </button>
