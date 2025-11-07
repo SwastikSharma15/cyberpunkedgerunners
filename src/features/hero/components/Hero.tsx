@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react'
+import React, { useRef } from 'react'
 import { useHeroAnimation } from '../../shared/hooks/useGSAPAnimations'
 import { CONTENT } from '../../shared/utils/constants'
 import { BackgroundVideo } from './BackgroundVideo'
